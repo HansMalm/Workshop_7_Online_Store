@@ -5,4 +5,43 @@ public class Order {
     private double totalPrice;
     private Product[] productList;
     private Customer customer;
+
+    public Order(int id, double totalPrice, Product[] productList, Customer customer) {
+        this.id = id;
+        this.totalPrice = totalPrice;
+        this.productList = productList;
+        this.customer = customer;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public double getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(double totalPrice) {
+        this.totalPrice = totalPrice;
+    }
+
+    public Product[] getProductList() {
+        return productList;
+    }
+
+    public void setProductList(Product[] productList) {
+        this.productList = productList;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
 }
