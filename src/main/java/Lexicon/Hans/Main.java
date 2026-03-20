@@ -9,8 +9,8 @@ public class Main {
         Order testOrder = new Order(10, customer1);
 
         System.out.println(testOrder.getId());
-        testOrder.getProductList();
         testOrder.addProduct(book);
-        testOrder.getProductList();
+        testOrder.printProductList();
+        System.out.println(testOrder.getTotalPrice());
     }
 }

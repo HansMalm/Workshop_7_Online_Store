@@ -27,19 +27,25 @@ public class Order {
         return totalPrice;
     }
 
-    public void setTotalPrice(Order order) {
+    public void setTotalPrice(Product product) {
+            totalPrice += product.getPrice();
+    }
+
+    public void printProductList() {
 
         for (Product product : productList) {
-            totalPrice += product.getPrice();
+            System.out.println((product.getName()));
         }
     }
 
-    public void getProductList() {
-        System.out.println(Arrays.toString(productList));
-    }
-
     public void addProduct(Product product) {
-        productList = productList;
+        if (productList[productList.length-1] == null) {
+            productList[0] = product;
+        }
+        else {
+            productList[productList.length-1] = product;
+        }
+        setTotalPrice(product);
     }
 
     public Customer getCustomer() {

@@ -6,9 +6,9 @@ public class Customer {
     private String email;
 
     public Customer(int id, String name, String email) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
+        setId(id);
+        setName(name);
+        setEmail(email);
     }
 
     public int getId() {
