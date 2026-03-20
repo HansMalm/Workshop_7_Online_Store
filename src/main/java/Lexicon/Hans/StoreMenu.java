@@ -22,6 +22,6 @@ public class StoreMenu {
         customerList.add(new Customer(202, "Boris Boring", "boris@boring.uk"));
         customerList.add(new Customer(303, "Cecilia Cissling", "cecil@hotmail.com"));
         //Input some orders.
-        orderList.add();
+        //orderList.add();
     }//StoreMenu
 }

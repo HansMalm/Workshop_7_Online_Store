@@ -35,7 +35,7 @@ public class Product {
         this.price = price;
     }
 
-    public void testprint(){
+    public void testPrint(){
         System.out.println(id);
     }
 }

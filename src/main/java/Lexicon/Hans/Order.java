@@ -1,5 +1,7 @@
 package Lexicon.Hans;
 
+import java.util.Arrays;
+
 public class Order {
     private int id;
     private double totalPrice;
@@ -7,8 +9,8 @@ public class Order {
     private Customer customer;
 
     public Order(int id, Customer customer) {
-        this.id = id;
-        this.customer = customer;
+        setId(id);
+        setCustomer(customer);
         this.totalPrice = 0;
         this.productList = new Product[1];
     }
@@ -25,16 +27,19 @@ public class Order {
         return totalPrice;
     }
 
-    public void setTotalPrice(double totalPrice) {
-        this.totalPrice = totalPrice;
+    public void setTotalPrice(Order order) {
+
+        for (Product product : productList) {
+            totalPrice += product.getPrice();
+        }
     }
 
-    public Product[] getProductList() {
-        return productList;
+    public void getProductList() {
+        System.out.println(Arrays.toString(productList));
     }
 
-    public void addProd(Product product) {
-        //this.productList = productList;
+    public void addProduct(Product product) {
+        productList = productList;
     }
 
     public Customer getCustomer() {
