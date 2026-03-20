@@ -6,11 +6,11 @@ public class Order {
     private Product[] productList;
     private Customer customer;
 
-    public Order(int id, double totalPrice, Product[] productList, Customer customer) {
+    public Order(int id, Customer customer) {
         this.id = id;
-        this.totalPrice = totalPrice;
-        this.productList = productList;
         this.customer = customer;
+        this.totalPrice = 0;
+        this.productList = new Product[1];
     }
 
     public int getId() {
@@ -33,8 +33,8 @@ public class Order {
         return productList;
     }
 
-    public void setProductList(Product[] productList) {
-        this.productList = productList;
+    public void addProd(Product product) {
+        //this.productList = productList;
     }
 
     public Customer getCustomer() {
